@@ -35,7 +35,7 @@ class BankAccount:
 
     def einzahlen(self, betrag: float):
         self._kontostand += betrag
-        self._transactions.append('{"betrag"=betrag, "kontostand"=self.get_kontostand()}')
+        self._transactions.append(dict(betrag=betrag, kontostand=self._kontostand))
 
     def abheben(self, betrag: float):
         if self._kontostand > betrag:
