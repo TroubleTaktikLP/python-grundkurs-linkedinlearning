@@ -14,3 +14,19 @@
 # Erstelle eine Funktion die als Parameter eine Liste erhält. Die Funktion soll
 # das Element mit dem größten Zahlenwert zurückgeben. Dabei soll der Vorzeichen
 # nicht berücksichtigt werden. Beispiel: [1, -2, 3, -4] -> 4. Erstelle Unit Tests.
+
+def ping_pong(zahl):
+    if zahl % 3 == 0 and zahl % 5 == 0:
+        return "Ping Pong"
+    elif zahl % 3 == 0:
+        return "Ping"
+    elif zahl % 5 == 0:
+        return "Pong"
+    else:
+        return zahl
+
+def invertiere_liste(liste):
+    return liste[::-1]
+
+def max_zahlenwert(liste):
+    return max(liste, key=abs)
